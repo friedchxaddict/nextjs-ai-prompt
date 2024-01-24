@@ -1,4 +1,4 @@
-import React from 'react';
+'use client';
 
 const CreatePrompt = () => {
   return <div>Create Prompt</div>;
