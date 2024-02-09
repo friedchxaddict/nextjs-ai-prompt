@@ -34,11 +34,10 @@ const EditPrompt = () => {
     if (!promptId) return alert('Prompt ID not found');
 
     try {
-      const response = await fetch('/api/prompt/new', {
-        method: 'POST',
+      const response = await fetch(`/api/prompt/${promptId}`, {
+        method: 'PATCH',
         body: JSON.stringify({
           prompt: post.prompt,
-          userId: session?.user.id,
           tag: post.tag,
         }),
       });
